@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.Table;
 
 @Entity
@@ -20,13 +21,13 @@ public class JournalEntry {
 	@Column
 	private String title;
 	
-	@Column
+	@Column(columnDefinition = "MEDIUMTEXT")
 	private String content;
 	
 	@Column(name="dateCreated")
 	private Date date;
 	
-	@Column(name="softDelete")
+	@Column(name="softDelete", columnDefinition = "BOOL")
 	private boolean delete;
 	
 	public long getId() {

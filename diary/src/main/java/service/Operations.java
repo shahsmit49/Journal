@@ -22,7 +22,7 @@ public class Operations implements OperationsContract {
 	}
 	
 	@Override
-	public boolean saveJournalEntry(JournalEntry data) {
+	public JournalEntry saveJournalEntry(JournalEntry data) {
 		// TODO Auto-generated method stub
 		data.setDelete(false);
 		data.setDate(new Date());

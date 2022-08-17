@@ -25,7 +25,7 @@ public class RepoCRUD implements RepoCRUDContract {
 		return repoCRUDInstance;
 	}
 
-	public boolean saveJournalEntry(JournalEntry data) {
+	public JournalEntry saveJournalEntry(JournalEntry data) {
 		// TODO Auto-generated method stub
 		try {
 			sessionObj.beginTransaction();
@@ -35,7 +35,7 @@ public class RepoCRUD implements RepoCRUDContract {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-		return true;
+		return data;
 	}
 
 	public List<JournalEntry> getList() {
